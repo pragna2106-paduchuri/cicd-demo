@@ -13,7 +13,8 @@ public class EmployeeController {
         return List.of(
                 "John - Software Developer",
                 "Sarah - QA Engineer",
-                "Mike - DevOps Engineer"
+                "Mike - DevOps Engineer",
+                "Emma - Cloud Engineer"
         );
     }
 }
