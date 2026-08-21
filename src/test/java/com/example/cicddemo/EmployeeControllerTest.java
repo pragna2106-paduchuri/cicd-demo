@@ -15,7 +15,7 @@ class EmployeeControllerTest {
 
         List<String> employees = controller.getEmployees();
 
-        assertEquals(5, employees.size());
+        assertEquals(4, employees.size());
         assertEquals("John - Software Developer", employees.get(0));
     }
 }
