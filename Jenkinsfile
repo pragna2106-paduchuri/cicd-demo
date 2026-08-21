@@ -30,7 +30,7 @@ pipeline {
         }
         stage('Docker Build') {
             steps {
-                sh 'docker build -t cicd-demo:1.0 .'
+                sh '/usr/local/bin/docker build -t cicd-demo:1.0 .'
             }
         }
 
