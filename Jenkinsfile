@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    environment {
+        PATH = "/usr/local/bin:/opt/homebrew/bin:${env.PATH}"
+    }
+
     stages {
 
         stage('Checkout') {
@@ -30,7 +34,7 @@ pipeline {
         }
         stage('Docker Build') {
             steps {
-                sh '/usr/local/bin/docker build -t cicd-demo:1.0 .'
+                sh 'docker build -t cicd-demo:1.0 .'
             }
         }
 
