@@ -21,5 +21,13 @@ pipeline {
             }
         }
 
+        stage('SonarQube Analysis') {
+            steps {
+                withSonarQubeEnv('SonarQube') {
+                    sh './mvnw sonar:sonar -Dsonar.projectKey=cicd-demo'
+                }
+            }
+        }
+
     }
 }
